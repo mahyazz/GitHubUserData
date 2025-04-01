@@ -2,6 +2,7 @@ package network
 
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.Response
 
 data class GitHubUser(
     val login: String,
@@ -17,8 +18,8 @@ data class GitHubRepo(
 
 interface ApiService {
     @GET("users/{username}")
-    suspend fun getUser(@Path("username") username: String): GitHubUser
+    suspend fun getUser(@Path("username") username: String): Response<GitHubUser>
 
     @GET("users/{username}/repos")
-    suspend fun getUserRepos(@Path("username") username: String): List<GitHubRepo>
+    suspend fun getUserRepos(@Path("username") username: String): Response<List<GitHubRepo>>
 }
