@@ -5,6 +5,9 @@ This Kotlin project provides a command-line interface for fetching and caching G
 
 ## Running the Application
 
-Use the following command to run the application:
+Use the following commands to build and run the application:
 
-`./gradlew run -q --console=plain`
+```
+./gradlew build
+./gradlew run -q --console=plain
+```
